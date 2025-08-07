@@ -1,0 +1,32 @@
+ Scanner obj = new Scanner(System.in);
+        int a = obj.nextInt();
+        int b = obj.nextInt();
+        char c = obj.next().charAt(0);
+        switch(c){
+            case '+':
+                float d = a+b;
+                System.out.println("Addition of two number is "+d);
+                break;
+            case '-':
+                float e = a-b;
+                System.out.println("Subtraction of two number is "+e);
+                break;
+            case '*':
+                float f = a*b;
+                System.out.println("Multiplication of two number is "+f);
+                break;
+            case '/':
+                float g = a/b;
+                System.out.println("Division of two number is "+g);
+                break;
+            case '%':
+                float h = a%b;
+                System.out.println("Modulo of two number is "+h);
+                break;
+            default:
+                System.out.println( "Invalid Input");
+        }
+                
+    }
+}
+       
