@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int siva = obj.nextInt();
+        int bala = obj.nextInt();
+        int sum = 0;
+        if (siva > 0 && bala > 0 && siva < 30 && bala < 30 && siva < bala) {
+            for (int i = siva; i <= bala; i++) {
+                if (i % 2 == 0) {
+                    sum += i;
+                }
+            }
+            System.out.println(sum);
+        } else {
+            System.out.println("Invalid Input");
+        }
+        
+    }
+}
