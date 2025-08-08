@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int input1 = obj.nextInt(); 
+        int input2 = obj.nextInt(); 
+        float sum = 0;
+        if ((input1 >= 1 && input1 <= 20) && (input2 >= 1 && input2 <= 20))
+        {
+            int first = 0;
+            int second = 1;
+            for (int i = 1; i <= input2; i++) 
+            {
+                if (i >= input1) 
+                {
+                    sum = sum + first;
+                }
+                int next = first + second;
+                first = second;
+                second = next;
+            }
+             System.out.printf("The Sum of Fibonacci value is %.1f " ,sum );
+        } 
+        else 
+        {
+            System.out.println("Invalid Input");
+        }
+        
+        
+    }
+}
+        
+    
