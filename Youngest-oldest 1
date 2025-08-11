@@ -1,0 +1,27 @@
+ Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        if (n < 0){
+            System.out.println("Invalid Input");
+        }
+        int[] ages = new int[n];
+        for (int i = 0; i < n; i++) {
+            ages[i] = obj.nextInt();
+            if (ages[i] < 0) {
+                System.out.println("Invalid Input");
+            }
+        }
+        int youngest = ages[0];
+        int oldest = ages[0];
+        for (int i = 1; i < n; i++) {
+            if (ages[i] < youngest) {
+                youngest = ages[i];
+            }
+            if (ages[i] > oldest) {
+                oldest = ages[i];
+            }
+        }
+        System.out.println("Youngest=" + youngest);
+        System.out.println("Oldest=" + oldest);
+    }
+}
+    
